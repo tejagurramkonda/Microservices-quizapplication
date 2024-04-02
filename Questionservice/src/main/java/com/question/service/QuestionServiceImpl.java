@@ -1,4 +1,4 @@
-package com.question.implementaion;
+package com.question.service;
 
 import com.question.entity.Question;
 import org.springframework.stereotype.Service;
@@ -30,6 +30,11 @@ public class QuestionServiceImpl implements QuestionService {
     @Override
     public Question getone(Long QuestionId) {
         return questionrepo.findById( QuestionId).orElseThrow(()->new RuntimeException("No questionfound"));
+    }
+
+    @Override
+    public List<Question> getQuestionofQuizId(Long quizId) {
+        return questionrepo.findByQuizId(quizId);
     }
 
 }

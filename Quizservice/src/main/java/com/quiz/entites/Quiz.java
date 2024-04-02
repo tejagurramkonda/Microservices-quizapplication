@@ -23,4 +23,3 @@ public class Quiz {
 
 }
 
-" this is in the Second Phase "

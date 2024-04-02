@@ -24,9 +24,16 @@ public class QuestionController {
     public List<Question> getall(){
         return questionService.get();
     }
-    @GetMapping("/{QuestionId}")
-    public Question getone(@PathVariable Long Questionid){
-        return questionService.getone(Questionid);
+    @GetMapping("/{questionId}")
+    public Question getone(@PathVariable Long questionId){
+        return questionService.getone(questionId);
+    }
+    @GetMapping("/quiz/{quizId}")
+
+    public  List <Question> getQuestionofQuizId(@PathVariable Long quizId){
+        return  questionService.getQuestionofQuizId(quizId);
+
     }
 
     }
+

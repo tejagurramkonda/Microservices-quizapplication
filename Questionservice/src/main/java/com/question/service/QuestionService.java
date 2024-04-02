@@ -9,6 +9,7 @@ public interface QuestionService  {
     Question create  (Question question);
     List<Question> get();
     Question getone(Long QuestionId);
+    List<Question> getQuestionofQuizId(Long quizId);
 
 
 
